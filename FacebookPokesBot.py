@@ -25,8 +25,8 @@ def findAndPoke(drv):
     buttons = drv.find_elements_by_xpath(f"//*[contains(text(),'{FACEBOOK_POKE_BUTTON_TEXT}')]")
     if buttons:
         for x in buttons:
-            # ActionChains(drv).click(x).perform()
-            pass
+            ActionChains(drv).click(x).perform()
+            # pass
         findAndPrintNames(drv)
         # drv.refresh()
 
